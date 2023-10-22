@@ -13,7 +13,7 @@ auto runMain(std::vector<NodeList> &saver, std::string &now_package) -> bool {
     if (TopApp == now_package) {
         return true;
     }
-    // 如果不一样，则写入off_value到指定节点(恢复节点值))，写完后给now_package重新赋值
+    // 如果不一样，则写入off_value到指定节点(恢复节点值)，写完后给now_package重新赋值
     for (const auto &app : saver) {
         if (now_package.find(app.packageName) != std::string::npos) {
             lock_val(app.off_value, app.node);

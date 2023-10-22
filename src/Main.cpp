@@ -12,8 +12,4 @@ int main(int argc, char **argv) {
     // 记录当前包名
     std::string now_package = "";
     runMainStart(saver, now_package);
-
-    for (const auto &tmp : saver) {
-        LOG(tmp.packageName);
-    }
 }
