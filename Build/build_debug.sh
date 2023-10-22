@@ -20,8 +20,8 @@ format_code() {
 }
 
 compile_start() {
-    local output=$project_root/Module/FeasArgSet
-    local for_test=$project_root/Test/FeasArgSet
+    local output=$project_root/Module/NodeCustomize
+    local for_test=$project_root/Test/NodeCustomize
 
 	echo "当前时间：$(date +%Y) 年 $(date +%m) 月 $(date +%d) 日 $(date +%H) 时 $(date +%M) 分 $(date +%S) 秒"
 	echo "开始编译，大概10秒完成"
@@ -33,7 +33,7 @@ compile_start() {
     $project_root/src/*.cpp -o $output && echo "*编译完成*" || exit 1
 
 	/data/data/com.termux/files/usr/bin/strip $output
-	# upx -9 project_root/FeasArgSet
+	# upx -9 project_root/NodeCustomize
 
 	cp -f $output $for_test
 	chmod +x $for_test

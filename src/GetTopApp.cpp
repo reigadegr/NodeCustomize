@@ -75,7 +75,7 @@ auto getTopAppShell() -> std::string {
     return checkSymbol(name);
 }
 
-auto inline checkSymbol(std::string &name) -> std::string {
+auto static inline checkSymbol(std::string &name) -> std::string {
     if (auto colonPos = name.find(':'); colonPos != std::string::npos) {
         // 截取冒号前边的部分
         name = name.substr(0, colonPos);

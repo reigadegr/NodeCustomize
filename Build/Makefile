@@ -7,7 +7,7 @@ SRC_DIR = ../src
 BUILD_DIR = ./build
 
 # 目标文件
-TARGET = $(BUILD_DIR)/FeasArgSet
+TARGET = $(BUILD_DIR)/NodeCustomize
 
 # 源文件  
 SRC_FILES = $(wildcard $(SRC_DIR)/*.cpp)
@@ -21,8 +21,8 @@ $(BUILD_DIR):
 .PHONY: release
 release:
 	@echo "编译 .."
-	$(CC) $(CFLAGS) /data/data/com.termux/files/home/FeasArgSet2/src/*.cpp -o /data/data/com.termux/files/home/FeasArgSet2/src/build/FeasArgSet
-	strip /data/data/com.termux/files/home/FeasArgSet2/src/build/FeasArgSet
+	$(CC) $(CFLAGS) /data/data/com.termux/files/home/NodeCustomize2/src/*.cpp -o /data/data/com.termux/files/home/NodeCustomize2/src/build/NodeCustomize
+	strip /data/data/com.termux/files/home/NodeCustomize2/src/build/NodeCustomize
 	
 # 清理
 clean: 
