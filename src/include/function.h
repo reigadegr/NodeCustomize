@@ -1,6 +1,8 @@
 #pragma once
 #include "NodeList.h"
 #include <iostream>
+auto CheckNode(std::vector<NodeList> &saver) -> bool;
+auto Testfile(const char *location);
 auto runMain(std::vector<NodeList> &saver, std::string &now_package) -> bool;
 auto printCurrentTime() -> std::string;
 auto runMainStart(std::vector<NodeList> &saver, std::string &now_package)

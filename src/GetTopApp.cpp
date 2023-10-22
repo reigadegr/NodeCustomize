@@ -53,8 +53,8 @@ auto getTopApp() -> std::string {
 
         std::getline(app, name, '\0');
         app.close();
-
-        return checkSymbol(name);
+        return name;
+        //  return checkSymbol(name);
     }
     return getTopAppShell();
 }
@@ -72,9 +72,11 @@ auto getTopAppShell() -> std::string {
     const auto last = name.find_last_not_of(' ');
     name = name.substr(first, last - first + 1);
 
-    return checkSymbol(name);
+    // return checkSymbol(name);
+    return name;
 }
-
+// 暂时不用
+/*
 auto static inline checkSymbol(std::string &name) -> std::string {
     if (auto colonPos = name.find(':'); colonPos != std::string::npos) {
         // 截取冒号前边的部分
@@ -82,3 +84,4 @@ auto static inline checkSymbol(std::string &name) -> std::string {
     }
     return name;
 }
+*/
