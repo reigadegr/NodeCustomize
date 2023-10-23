@@ -22,7 +22,7 @@ auto runMain(std::vector<NodeList> &saver, std::string &now_package) -> bool {
 
     now_package = TopApp;
     LOG("时间: ", printCurrentTime());
-    LOG("检测到TopApp为: ", TopApp);
+    LOG("检测到TopApp为: ", TopApp, "\n");
     // 开始写入节点值
     for (const auto &app : saver) {
         if (now_package.find(app.packageName) != std::string::npos) {
