@@ -11,6 +11,7 @@ format_code() {
 	code_file="
         $project_root/src/*.cpp
         $project_root/src/include/*.h
+        $project_root/src/include/*.hpp
     "
 
 	for i in $code_file; do
