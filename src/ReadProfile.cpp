@@ -4,6 +4,11 @@
 #include <vector>
 bool readProfile(const char *Profile, std::vector<NodeList> &saver) {
     std::ifstream file(Profile);
+    if (!file.is_open()) {
+        // 文件打开失败的错误处理
+        return false;
+    }
+
     std::string buf;
 
     // struct member
