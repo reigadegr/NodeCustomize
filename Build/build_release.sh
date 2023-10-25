@@ -24,7 +24,7 @@ compile_start() {
     local output=$project_root/Module/NodeCustomize
     local for_test=$project_root/Test/NodeCustomize
     for i in $for_test $output; do
-        mkdir -p $(dirname $i)
+        [ ! -d $(dirname $i) ] && mkdir -p $(dirname $i)
     done
 	echo "当前时间：$(date +%Y) 年 $(date +%m) 月 $(date +%d) 日 $(date +%H) 时 $(date +%M) 分 $(date +%S) 秒"
 	echo "开始编译，大概10秒完成"
